@@ -6,6 +6,7 @@ SkyTrack DE is an end-to-end data engineering pipeline that ingests, processes, 
 
 ## 🧱 Project Structure
 
+```bash
 SkyTrack DE/
 │
 ├── data/
@@ -27,6 +28,7 @@ SkyTrack DE/
 └── README.md
 
 ---
+```
 
 ## 🚀 Features
 
@@ -84,6 +86,7 @@ bash orchestrator.sh
 
 #### 📊 Fact Table: fact_flights
 
+```bash
 Column Description
 flight_id Unique snapshot ID
 aircraft_id FK to aircraft
@@ -91,9 +94,11 @@ airline_id FK to airline
 timestamp UTC snapshot time
 callsign Aircraft callsign
 geo_distance_km Haversine distance (lat/lon points)
+```
 
 #### 📁 Dimension Table: dim_airlines
 
+```bash
 Column Description
 airline_id Primary Key
 airline_name Name of the airline
@@ -101,6 +106,7 @@ icao ICAO code
 callsign Radio callsign
 country Country
 active Y/N flag
+```
 
 #### 🛩️ Dimension Table: dim_aircrafts
 
@@ -117,10 +123,10 @@ Logs written to logs/etl.log
 
 #### To view logs:
 
-bash
-Copy
-Edit
+```bash
+
 tail -f logs/etl.log
+```
 
 ## 📊 Possible Future Improvements
 
