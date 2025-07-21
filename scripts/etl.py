@@ -299,4 +299,4 @@ dim_aircraft.write.jdbc(url=jdbc_url, table="skytracker.aircrafts", mode="overwr
 dim_airline.write.jdbc(url=jdbc_url, table="skytracker.airlines", mode="overwrite", properties=db_properties)
 dim_airports.write.jdbc(url=jdbc_url, table="skytracker.airports", mode="overwrite", properties=db_properties)
 
-print("Loading data into the database successfully.")
+print("Loaded data into the database successfully.")

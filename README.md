@@ -64,71 +64,80 @@ conda activate skytrack-env
 
 # Step 3: Install dependencies
 pip install -r requirements.txt
+```
 
-🧪 Running the Pipeline
-Option 1: Manual Run
+## 🧪 Running the Pipeline
+
+#### Option 1: Manual Run
+
 bash
 Copy
 Edit
-bash orchestrator.sh
+`bash orchestrator.sh`
 
-Option 2: Schedule with Cron (Every 15 Minutes)
+#### Option 2: Schedule with Cron (Every 15 Minutes)
+
 cron
 Copy
 Edit
-*/15 * * * * /path/to/SkyTrack\ DE/orchestrator.sh >> /path/to/SkyTrack\ DE/logs/cron.log 2>&1
+`*/15 * * * * /path/to/SkyTrack\ DE/orchestrator.sh >> /path/to/SkyTrack\ DE/logs/cron.log 2>&1`
 
-🛠️ Data Model (Star Schema)
+## 🛠️ Data Model (Star Schema)
 
-📊 Fact Table: fact_flights
-Column	Description
-flight_id	Unique snapshot ID
-aircraft_id	FK to aircraft
-airline_id	FK to airline
-timestamp	UTC snapshot time
-callsign	Aircraft callsign
-geo_distance_km	Haversine distance (lat/lon points)
+#### 📊 Fact Table: fact_flights
 
-📁 Dimension Table: dim_airlines
-Column	Description
-airline_id	Primary Key
-airline_name	Name of the airline
-icao	ICAO code
-callsign	Radio callsign
-country	Country
-active	Y/N flag
+Column Description
+flight_id Unique snapshot ID
+aircraft_id FK to aircraft
+airline_id FK to airline
+timestamp UTC snapshot time
+callsign Aircraft callsign
+geo_distance_km Haversine distance (lat/lon points)
 
-🛩️ Dimension Table: dim_aircrafts
-Column	Description
-aircraft_id	Primary Key
-manufacturer	Aircraft maker
-type_code	Model code
-registration	Registration number
-icao24	ICAO hex identifier
+#### 📁 Dimension Table: dim_airlines
 
-📈 Monitoring & Logging
+Column Description
+airline_id Primary Key
+airline_name Name of the airline
+icao ICAO code
+callsign Radio callsign
+country Country
+active Y/N flag
+
+#### 🛩️ Dimension Table: dim_aircrafts
+
+Column Description
+aircraft_id Primary Key
+manufacturer Aircraft maker
+type_code Model code
+registration Registration number
+icao24 ICAO hex identifier
+
+## 📈 Monitoring & Logging
+
 Logs written to logs/etl.log
 
-To view logs:
+#### To view logs:
 
 bash
 Copy
 Edit
 tail -f logs/etl.log
 
+## 📊 Possible Future Improvements
 
-📊 Possible Future Improvements
- Migrate to Apache Airflow or Prefect for orchestration
+Migrate to Apache Airflow or Prefect for orchestration
 
- Add Dockerfile for containerization
+Add Dockerfile for containerization
 
- Store output in cloud storage (S3, Redshift, BigQuery)
+Store output in cloud storage (S3, Redshift, BigQuery)
 
- Add unit tests (pytest)
+Add unit tests (pytest)
 
- Build dashboard (e.g., with Streamlit or Metabase)
+Build dashboard (e.g., with Streamlit or Metabase)
 
-📚 Data Sources
+## 📚 Data Sources
+
 OpenSky Network API
 https://opensky-network.org/apidoc/
 Provides real-time aircraft state data (JSON).
@@ -137,8 +146,8 @@ OpenFlights Airline/Aircraft CSVs
 https://openflights.org/data.html
 Provides metadata for enrichment.
 
-👤 Author
+## 👤 Author
+
 Caleb Amao
 GitHub: @caleb-ola
 LinkedIn:
-```
