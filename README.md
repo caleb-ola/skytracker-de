@@ -110,12 +110,14 @@ active Y/N flag
 
 #### 🛩️ Dimension Table: dim_aircrafts
 
+```
 Column Description
 aircraft_id Primary Key
 manufacturer Aircraft maker
 type_code Model code
 registration Registration number
 icao24 ICAO hex identifier
+```
 
 ## 📈 Monitoring & Logging
 
@@ -130,15 +132,15 @@ tail -f logs/etl.log
 
 ## 📊 Possible Future Improvements
 
-Migrate to Apache Airflow or Prefect for orchestration
+Migration to Apache Airflow or Prefect for orchestration
 
-Add Dockerfile for containerization
+Adding Dockerfile for containerization
 
-Store output in cloud storage (S3, Redshift, BigQuery)
+Storing output in cloud storage (S3, Redshift, BigQuery)
 
-Add unit tests (pytest)
+Adding unit tests (pytest)
 
-Build dashboard (e.g., with Streamlit or Metabase)
+Building dashboard (e.g., with PowerBI, Tableau, Looker Studio, Streamlit or Metabase)
 
 ## 📚 Data Sources
 
