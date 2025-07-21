@@ -73,14 +73,20 @@ pip install -r requirements.txt
 bash
 Copy
 Edit
-`bash orchestrator.sh`
+
+```
+bash orchestrator.sh
+```
 
 #### Option 2: Schedule with Cron (Every 15 Minutes)
 
 cron
 Copy
 Edit
-`*/15 * * * * /path/to/SkyTrack\ DE/orchestrator.sh >> /path/to/SkyTrack\ DE/logs/cron.log 2>&1`
+
+```
+*/15 * * * * /path/to/SkyTrack\ DE/orchestrator.sh >> /path/to/SkyTrack\ DE/logs/cron.log 2>&1
+```
 
 ## 🛠️ Data Model (Star Schema)
 
