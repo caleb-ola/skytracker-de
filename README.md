@@ -70,21 +70,13 @@ pip install -r requirements.txt
 
 #### Option 1: Manual Run
 
-bash
-Copy
-Edit
-
-```
+```bash Copy Edit
 bash orchestrator.sh
 ```
 
 #### Option 2: Schedule with Cron (Every 15 Minutes)
 
-cron
-Copy
-Edit
-
-```
+```cron Copy Edit
 */15 * * * * /path/to/SkyTrack\ DE/orchestrator.sh >> /path/to/SkyTrack\ DE/logs/cron.log 2>&1
 ```
 
